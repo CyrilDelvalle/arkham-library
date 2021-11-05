@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import NavBar from '../components/NavBar/NavBar';
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import NavBar from "../components/NavBar/NavBar";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       </h1>
 
       <p className={styles.description}>
-        Get started by editing{' '}
+        Get started by editing{" "}
         <code className={styles.code}>pages/index.js</code>
       </p>
 
@@ -45,13 +45,9 @@ export default function Home() {
           className={styles.card}
         >
           <h2>Deploy &rarr;</h2>
-          <p>
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
+          <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
         </a>
       </div>
-
-
     </div>
-  )
+  );
 }

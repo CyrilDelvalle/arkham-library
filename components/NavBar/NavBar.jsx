@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Container, Menu } from "semantic-ui-react";
 import SearchBar from "../SearchBar/SearchBar";
@@ -11,7 +10,8 @@ function NavBar(props) {
       <Container>
         <Menu.Item header position="left">
           <Link href="/">
-            <Image src="/logo.png" alt="Arkham Logo" width={72} height={16} />
+            HOME
+            {/* <Image src="/logo.png" alt="Arkham Logo" width={72} height={16} /> */}
           </Link>
         </Menu.Item>
         <Link href="/cards">

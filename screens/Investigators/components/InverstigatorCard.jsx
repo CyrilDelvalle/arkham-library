@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import InvestigatorCardWrapper from "./InvestigatorCardWrapper";
 
 function InverstigatorCard({ name, imagesrc }) {
-  console.log({ name, imagesrc });
   return (
-    <div>
+    <InvestigatorCardWrapper>
       <img
+        className="card-wrapper"
         alt={`card-${name}`}
         width={200}
         height={150}
         src={`https://arkhamdb.com${imagesrc}`}
       />
-    </div>
+    </InvestigatorCardWrapper>
   );
 }
 

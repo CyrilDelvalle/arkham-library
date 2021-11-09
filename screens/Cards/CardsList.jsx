@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Container, Grid } from "semantic-ui-react";
 import getAllCards from "../../services/getAllCards";
 import Card from "./components/Card";
-import CardsListWrapper from "./CardsListWrapper";
 
 function CardsList() {
   const [isLoad, setIsLoad] = useState(false);
@@ -21,21 +19,11 @@ function CardsList() {
   }, []);
 
   return (
-    <CardsListWrapper>
-      <Container>
-        <Grid columns={5}>
-          <Grid.Row>
-            {isLoad
-              ? cards.map((card) => (
-                  <Grid.Column>
-                    <Card key={`card-${card.name}`} card={card} />
-                  </Grid.Column>
-                ))
-              : null}
-          </Grid.Row>{" "}
-        </Grid>
-      </Container>
-    </CardsListWrapper>
+    <div className="bg-white dark:bg-gray-800 grid grid-cols-5 grid-rows-3 gap-4 mx-8">
+      {isLoad
+        ? cards.map((card) => <Card key={`card-${card.name}`} card={card} />)
+        : null}
+    </div>
   );
 }
 

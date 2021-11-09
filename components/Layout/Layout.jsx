@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
-import styles from "../../styles/Home.module.css";
 
+// eslint-disable-next-line react/prop-types
 export default function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <main className={styles.main}> {children} </main>
+      <main className="bg-white dark:bg-gray-800"> {children} </main>
       <Footer />
     </>
   );

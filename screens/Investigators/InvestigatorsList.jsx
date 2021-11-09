@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Container, Grid } from "semantic-ui-react";
 import getAllCards from "../../services/getAllCards";
 import InvestigatorCard from "./components/InverstigatorCard";
-import InvestigatorListWrapper from "./InvestigatorLIstWrapper";
 
 function InvestigatorsList() {
   const [isLoad, setIsLoad] = useState(false);
@@ -21,25 +19,17 @@ function InvestigatorsList() {
   }, []);
 
   return (
-    <InvestigatorListWrapper>
-      {/* <Container> */}
-      <Grid columns={5}>
-        <Grid.Row>
-          {isLoad
-            ? investigators.map((card) => (
-                <Grid.Column>
-                  <InvestigatorCard
-                    key={`investigator-${card.name}`}
-                    name={card.name}
-                    imagesrc={card.imagesrc}
-                  />
-                </Grid.Column>
-              ))
-            : null}
-        </Grid.Row>
-      </Grid>
-      {/* </Container> */}
-    </InvestigatorListWrapper>
+    <div className="bg-white dark:bg-gray-800 grid grid-cols-5 grid-rows-3 gap-4 mx-8">
+      {isLoad
+        ? investigators.map((card) => (
+            <InvestigatorCard
+              key={`investigator-${card.name}`}
+              name={card.name}
+              imagesrc={card.imagesrc}
+            />
+          ))
+        : null}
+    </div>
   );
 }
 

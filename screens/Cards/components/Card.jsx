@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import CardWrapper from "./CardWrapper";
 
 function Card({ card }) {
   return (
-    <CardWrapper onClick={() => console.log(card)}>
+    <div>
       <img
         className="card-wrapper"
         alt={`card-${card.name}`}
@@ -12,7 +11,7 @@ function Card({ card }) {
         height={300}
         src={`https://arkhamdb.com${card.imagesrc}`}
       />
-    </CardWrapper>
+    </div>
   );
 }
 

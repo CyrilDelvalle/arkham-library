@@ -1,11 +1,14 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 import '../styles/globals.css'
-import 'semantic-ui-css/semantic.min.css'
+// import 'tailwindcss/tailwind.css'
 import Layout from '../components/Layout/Layout'
 
 function MyApp({ Component, pageProps }) {
-  return <Layout>
+  return <> <Layout>
     <Component {...pageProps} />
-  </Layout >
+  </Layout ></>
 }
 
 export default MyApp

@@ -5,7 +5,7 @@ function InverstigatorCard({ name, imagesrc }) {
   return (
     <div>
       <img
-        className="card-wrapper"
+        className="card-wrapper transform transition duration-500 hover:scale-110"
         alt={`card-${name}`}
         width={220}
         height={160}
